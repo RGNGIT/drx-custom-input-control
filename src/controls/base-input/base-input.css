@@ -1,0 +1,68 @@
+.base-input {
+  margin-top: 8px;
+  margin-left: 3px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.base-input label {
+  color: rgb(0, 84, 160);
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  height: fit-content;
+}
+
+.base-input input {
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.base-input input:focus {
+  border: none;
+}
+
+.base-input input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.base-input .input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.base-input .input-wrapper .border {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgb(223, 224, 227);
+  left: 0;
+  bottom: 0;
+  transition: opacity .2s;
+  z-index: 1;
+}
+
+.base-input .input-wrapper .border-active {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: rgb(0, 84, 160);
+  left: 0;
+  bottom: -0.5px;
+  opacity: 0;
+  transition: opacity .2s;
+  z-index: 2;
+}
+
+.input-wrapper:has(input:focus-visible) .border-active {
+  opacity: 1;
+}
+
+.input-wrapper:has(input:focus-visible) .border {
+  opacity: 0;
+}
