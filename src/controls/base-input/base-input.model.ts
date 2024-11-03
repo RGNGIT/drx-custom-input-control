@@ -1,7 +1,8 @@
-import { IRemoteComponentCardApi } from "@directum/sungero-remote-component-types";
+import { IRemoteComponentCardApi, IRemoteComponentContext } from "@directum/sungero-remote-component-types";
 
 export interface IBaseInputProps {
   api: IRemoteComponentCardApi
+  context: IRemoteComponentContext
   label: string;
   propertyName: string;
   value?: string;
